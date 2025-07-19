@@ -36,7 +36,7 @@ public class PlatformSearchServiceImpl implements PlatformSearchService {
     private ServiceTypeRepository serviceTypeRepository;
 
     @Override
-    public GenericResponse getPlatformGarageDetails(PlatformGarageSearchRequest request, String brand, String city, String zip, String garageName, List<Integer> serviceType) {
+    public GenericResponse getPlatformGarageDetails( String brand, String city, String zip, String garageName, List<Integer> serviceType) {
         try {
 
             List<GarageSearchResults> searchResults = new ArrayList<> ( );

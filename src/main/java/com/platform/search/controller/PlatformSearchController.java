@@ -1,6 +1,5 @@
 package com.platform.search.controller;
 
-import com.platform.search.request.PlatformGarageSearchRequest;
 import com.platform.search.response.GenericResponse;
 import com.platform.search.service.PlatformSearchService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -10,7 +9,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -46,10 +44,10 @@ public class PlatformSearchController {
             @ApiResponse(responseCode = "404", description = "Search api not found",
                     content = @Content)})
     @GetMapping("garage")
-    public GenericResponse getGarageServiceDetails(PlatformGarageSearchRequest request, @RequestParam(required = false) String brand, @RequestParam(required = false) String city, @RequestParam(required = false) String zip, @RequestParam(required = false) String garageName, @RequestParam(required = false) List<Integer> serviceType) {
+    public GenericResponse getGarageServiceDetails(@RequestParam(required = false) String brand, @RequestParam(required = false) String city, @RequestParam(required = false) String zip, @RequestParam(required = false) String garageName, @RequestParam(required = false) List<Integer> serviceType) {
         GenericResponse response = null;
         try {
-            response = platformSearchService.getPlatformGarageDetails ( request , brand, city, zip, garageName, serviceType );
+            response = platformSearchService.getPlatformGarageDetails ( brand, city, zip, garageName, serviceType );
             return response;
         }
         catch ( Exception e ) {
