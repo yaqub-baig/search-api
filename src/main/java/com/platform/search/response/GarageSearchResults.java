@@ -1,9 +1,9 @@
 package com.platform.search.response;
 
-import com.platform.search.entity.Garage;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.platform.search.entity.GarageAddress;
+import com.platform.search.entity.GarageDetails;
 import com.platform.search.entity.GaragePendingActions;
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -15,10 +15,12 @@ import lombok.Setter;
 @Getter
 @Setter
 @Builder
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class GarageSearchResults {
-	
-	private Garage garageDetails;
-	private GarageAddress address;
-	private GaragePendingActions actions;
-
+    
+    @JsonIgnoreProperties({"serviceType"}) // Prevent infinite recursion
+    private GarageDetails garageDetails;
+    
+    private GarageAddress address;
+    private GaragePendingActions actions;
 }
