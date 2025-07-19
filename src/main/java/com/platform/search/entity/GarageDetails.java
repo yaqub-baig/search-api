@@ -45,6 +45,7 @@ public class GarageDetails {
             joinColumns = @JoinColumn(name = "garage_details_id"),
             inverseJoinColumns = @JoinColumn(name = "service_type_id")
     )
+    @Builder.Default
     @JsonIgnoreProperties("garageDetails") // Prevents infinite recursion
     private List<ServiceType> serviceType = new ArrayList<>();
 

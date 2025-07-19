@@ -5,7 +5,6 @@ import com.platform.search.entity.GarageAddress;
 import com.platform.search.entity.GarageDetails;
 import com.platform.search.entity.GaragePendingActions;
 import com.platform.search.entity.ServiceType;
-import com.platform.search.request.PlatformGarageSearchRequest;
 import com.platform.search.response.GarageSearchResults;
 import com.platform.search.response.GenericResponse;
 import com.platform.search.service.PlatformSearchService;
@@ -36,7 +35,7 @@ public class PlatformSearchServiceImpl implements PlatformSearchService {
     private ServiceTypeRepository serviceTypeRepository;
 
     @Override
-    public GenericResponse getPlatformGarageDetails( String brand, String city, String zip, String garageName, List<Integer> serviceType) {
+    public GenericResponse getPlatformGarageDetails(String brand, String city, String zip, String garageName, List<Integer> serviceType) {
         try {
 
             List<GarageSearchResults> searchResults = new ArrayList<> ( );
