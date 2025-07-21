@@ -8,5 +8,5 @@ public interface PlatformSearchService {
 
 	GenericResponse getPlatformGarageDetails( String brand, String city, String zip, String garageName, List<Integer> serviceType);
 
-//    GenericResponse getGarageByQuery(PlatformGarageSearchRequest request);
+
 }

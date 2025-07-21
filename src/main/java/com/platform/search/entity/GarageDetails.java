@@ -35,7 +35,6 @@ public class GarageDetails {
     @Column(name = "contact_number")
     private String contactNumber;
 
-
     @Column(name = "brands")
     private String brands;
 
@@ -66,6 +65,7 @@ public class GarageDetails {
 
     @Column(name = "insert_tms")
     private Date insertTms;
+
 
 
 

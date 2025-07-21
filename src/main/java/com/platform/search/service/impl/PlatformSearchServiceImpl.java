@@ -31,6 +31,7 @@ public class PlatformSearchServiceImpl implements PlatformSearchService {
 
     @Autowired
     private GaragePendingActionsRepository garagePendingActionsRepository;
+
     @Autowired
     private ServiceTypeRepository serviceTypeRepository;
 
