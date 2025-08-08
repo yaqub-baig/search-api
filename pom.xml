@@ -8,11 +8,11 @@
         <version>2.7.14</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.platform.search</groupId>
-    <artifactId>PlatformSearchService</artifactId>
+    <groupId>com.service.search</groupId>
+    <artifactId>SearchService</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>PlatformSearchService</name>
-    <description>PlatformSearchService</description>
+    <name>SearchService</name>
+    <description>SearchService</description>
     <properties>
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
