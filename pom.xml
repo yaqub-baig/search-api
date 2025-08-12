@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.service.search</groupId>
-    <artifactId>SearchService</artifactId>
+    <artifactId>SearchApi</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SearchService</name>
-    <description>SearchService</description>
+    <name>SearchApi</name>
+    <description>SearchApi</description>
     <properties>
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
